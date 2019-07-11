@@ -1,11 +1,10 @@
-const path = require('path');
-
 module.exports = (Franz, options) => {
   const getMessages = () => {
-    const allMessages = parseInt(document.querySelectorAll('.unread-badge')[1].getAttribute('data-badge-count'));
+    const readBadgeCount = e => parseInt(e.getAttribute('data-badge-count'), 10);
 
-    // set Franz badge
-    Franz.setBadge(allMessages);
+    const [indirect, direct] = [...document.querySelectorAll('.unread-badge')].map(readBadgeCount);
+
+    Franz.setBadge(direct, indirect);
   };
 
 

@@ -1,12 +1,16 @@
 {
   "id": "basecamp",
-  "name": "basecamp",
+  "name": "Basecamp",
   "version": "1.0.0",
-  "description": "Basecamp",
+  "description": "Project Management & Team Communication Software.",
   "main": "index.js",
   "author": "Brady Holt <brady.holt@gmail.com>",
   "license": "MIT",
   "config": {
-    "serviceURL": "https://launchpad.37signals.com/signin"
+    "serviceURL": "https://launchpad.37signals.com/signin",
+    "hasTeamId": false,
+    "hasNotificationSound": true,
+    "hasDirectMessages": true,
+    "hasIndirectMessages": true
   }
 }
